@@ -18,7 +18,8 @@ const login = () => {
   }, [session]);
   return (
     <>
-      <div className="bg-slate-900 w-[calc(100vw-70px)] mx-auto h-[100vh] flex justify-center items-center">
+     
+      <div className="bg-slate-900 w-[calc(100vw-80px)] mx-auto h-[100vh] flex justify-center items-center">
         <div className="sm:w-[350px] bg-blue-500 sm:h-[460px] mx-auto relative  my-auto hover:shadow-blue-700 hover:shadow-2xl  shadow-lg shadow-blue-800 rounded-lg flex flex-col justify-center items-center gap-5 w-[80vw] h-[70vh]"> 
           <button disabled = {isloading}
             onClick={() => {
@@ -77,7 +78,7 @@ const login = () => {
             </svg>
             <span>Continue with Google</span>
           </button>
-
+              
           <button 
           disabled ={isloading}
             onClick={() => {

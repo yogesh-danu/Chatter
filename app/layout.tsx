@@ -24,9 +24,9 @@ export default function RootLayout({
       
      <SessionProvider>
 
-      <body className="md:flex bg-slate-900  overscroll-none">
+      <body className="md:flex bg-slate-900  h-screen m-0 p-0">
       <Navbar />
-      <div>
+      <div className="w-[calc(100vw-80px)] h-screen">
         {children}
 
       </div>

@@ -34,24 +34,24 @@ const Navbar = () => {
     
 
     <>
-        <nav className= 'md:w-[70px] md:h-[100vh] w-screen h-[60px] flex md:flex-col bg-slate-800 md:justify-between md:gap-2 justify-center gap-3 p-2 '>
+        <nav className= 'md:w-[80px] md:h-[100vh] w-screen h-[60px] flex md:flex-col bg-slate-800 md:justify-between  justify-center max-md:gap-3 p-2 '>
             <ul className='flex md:flex-col gap-3 justify-center '>
-                <li className='ml-2 size-8 rounded-full flex justify-center items-center  cursor-pointer' ><IoChatboxEllipsesOutline className='size-6   hover:shadow-sm hover:shadow-black invert'/></li>
-                <li className='ml-2 size-8 rounded-full flex justify-center items-center cursor-pointer' >
-                <LiaUserFriendsSolid className='size-6   hover:shadow-sm hover:shadow-black invert' /></li>
-                <li className='ml-2  size-8 rounded-full flex justify-center items-center  cursor-pointer' >
-                <MdOutlineGroups className='size-6  hover:shadow-sm hover:shadow-black invert'/>
+                <li className='ml-2 size-12 rounded-full flex justify-center items-center  cursor-pointer' ><IoChatboxEllipsesOutline className='size-10   hover:shadow-sm hover:shadow-black invert'/></li>
+                <li className='ml-2 size-12 rounded-full flex justify-center items-center cursor-pointer' >
+                <LiaUserFriendsSolid className='size-10   hover:shadow-sm hover:shadow-black invert' /></li>
+                <li className='ml-2  size-12 rounded-full flex justify-center items-center  cursor-pointer' >
+                <MdOutlineGroups className='size-10  hover:shadow-sm hover:shadow-black invert'/>
                 </li>
                 
             </ul>
          
            <ul className='flex md:flex-col gap-3'>
-             <li className='ml-2 size-8 rounded-full  flex justify-center items-center  cursor-pointer'><CgProfile className='size-6   hover:shadow-sm hover:shadow-black invert'/></li>
-             <li className='ml-2 size-8 rounded-full flex justify-center items-center  cursor-pointer'><IoIosSettings className='size-6   hover:shadow-sm hover:shadow-black invert' /></li>
+             <li className='ml-2 size-12 rounded-full  flex justify-center items-center  cursor-pointer'><CgProfile className='size-10   hover:shadow-sm hover:shadow-black invert'/></li>
+             <li className='ml-2 size-12 rounded-full flex justify-center items-center  cursor-pointer'><IoIosSettings className='size-10   hover:shadow-sm hover:shadow-black invert' /></li>
             {auth?(<>
-           <li onClick={handleSignOut} className='ml-2 size-8 rounded-full flex justify-center items-center  cursor-pointer'> <CiLogout className='size-6   hover:shadow-sm hover:shadow-black invert'/></li>
+           <li onClick={handleSignOut} className='ml-2 size-12 rounded-full flex justify-center items-center  cursor-pointer'> <CiLogout className='size-10   hover:shadow-sm hover:shadow-black invert'/></li>
           </>
-          ):( <Link className='ml-2 size-8 rounded-full flex justify-center items-center  cursor-pointer' href='/login'> <RiLoginBoxLine className='size-6   hover:shadow-sm hover:shadow-black invert'/></Link>)
+          ):( <Link className='ml-2 size-12 rounded-full flex justify-center items-center  cursor-pointer' href='/login'> <RiLoginBoxLine className='size-10   hover:shadow-sm hover:shadow-black invert'/></Link>)
           } 
              
            </ul>

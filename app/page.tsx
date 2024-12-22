@@ -11,13 +11,13 @@ export default  function Home() {
   }
   return (
    <>
-   <div className="pr flex w-screen md:w-[calc(100vw-70px)] h-[100vh-60px] md:h-screen">{ /*container for pararalle route */}
+   <div className=" flex ">
 
-      <div className="max-md:w-[35%] w-[250px] h-screen max-md:h-[100vh-60px] cursor-pointer bg-green-950  p-2">
+      <div className="max-md:w-[35%] w-[40%] h-screen max-md:h-[100vh-60px] ">
         <Friends/>
        
       </div>
-      <div className="w-[65%] h-screen">
+      <div className="w-[65%] md:w-[60%]">
 
         <Chat/>
       </div>
