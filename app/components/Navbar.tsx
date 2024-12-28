@@ -5,8 +5,6 @@ import { usePathname } from 'next/navigation';
 import React from 'react'
 import { IoChatboxEllipsesOutline } from "react-icons/io5";
 import { LiaUserFriendsSolid } from "react-icons/lia";
-import { MdOutlineGroups } from "react-icons/md";
-import { IoIosSettings } from "react-icons/io";
 import { CgProfile } from "react-icons/cg";
 import { CiLogout } from "react-icons/ci";
 import { RiLoginBoxLine } from "react-icons/ri";
