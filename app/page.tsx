@@ -5,10 +5,9 @@ import Friends from "./components/Friends";
 import { redirect } from "next/navigation";
 
 export default  function Home() {
-  const { data: session } = useSession();
-  if (!session) {
-    redirect("/login");
-  }
+   const { data: session } = useSession();
+// ADD A REDIRECT ROUT HERE IF NOT LOG IN 
+  
   return (
    <>
    <div className=" flex ">
