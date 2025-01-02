@@ -1,15 +1,16 @@
 import mongoose from "mongoose";
 
-const DATABASE_URL = process.env.DATABASE_URL;
 
-if (!DATABASE_URL) {
-  throw new Error("DATABASE_URL is required");
-}
 
 // Track connection state globally to avoid reinitialization
 let isConnected = false;
 
 export const connectToDatabase = async () => {
+  const DATABASE_URL = await process.env.DATABASE_URL;
+
+if (!DATABASE_URL) {
+  throw new Error("DATABASE_URL is required");
+}
   if (isConnected) return; // Skip if already connected
 
   try {

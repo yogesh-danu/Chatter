@@ -10,22 +10,29 @@ import { CiLogout } from "react-icons/ci";
 import { RiLoginBoxLine } from "react-icons/ri";
 import Link from 'next/link';
 import { useEffect,useState } from 'react';
+import Image from 'next/image';
 
 const Navbar = () => {
+  let image:string= ''
   const session = useSession();
   const pathname = usePathname()
   const isactive = (route : string)=>pathname === route
   const [auth, setauth] = useState(false)
+   
   useEffect(() => {
     if (session.status ==="authenticated") {
       setauth(true)
+
     }
   
     else{
       setauth(false)
-    }
     
-  }, )
+    }
+   
+    
+    
+  }, [])
   
   const handleSignOut = () => {
     signOut();
@@ -35,7 +42,7 @@ const Navbar = () => {
     
 
     <>
-        <nav className= 'md:w-[80px] md:h-[100vh] w-screen h-[60px] flex md:flex-col bg-slate-800 md:justify-between  justify-center max-md:gap-3 p-2 '>
+        <nav className= 'md:w-[80px] md:h-[100vh] max-md:hidden  md:flex-col bg-slate-800 md:justify-between  justify-center  p-2 hidden md:flex '>
             <ul className='flex md:flex-col gap-3 justify-center '>
                 <Link href='/' className='ml-2 size-12 rounded-full flex justify-center items-center  cursor-pointer' ><IoChatboxEllipsesOutline className={`size-10   hover:shadow-sm hover:shadow-black  ${  isactive('/') ? 'text-blue-500' :' text-white' }`}/></Link>
                 <Link href='/friends' className='ml-2 size-12 rounded-full flex justify-center items-center cursor-pointer' >
@@ -44,7 +51,15 @@ const Navbar = () => {
             </ul>
          
            <ul className='flex md:flex-col gap-3'>
-             <Link href='/dashboard' className='ml-2 size-12 rounded-full  flex justify-center items-center  cursor-pointer'><CgProfile className={`size-10   hover:shadow-sm hover:shadow-black  ${  isactive('/dashboard') ? 'text-blue-500' :'text-white' }`}/></Link>
+             {auth?(<>
+              <Link href='/dashboard'>
+    
+    <Image src='/profile.svg' alt='profile' width={40} height={40} className='invert w-auto h-auto'  />
+    </Link>
+                            </>
+          ):( <Link href='/dashboard' className='ml-2 size-12 rounded-full  flex justify-center items-center  cursor-pointer'><CgProfile className={`size-10   hover:shadow-sm hover:shadow-black  ${  isactive('/dashboard') ? 'text-blue-500' :'text-white' }`}/></Link>
+        )
+          } 
             {auth?(<>
            <li onClick={handleSignOut} className='ml-2 size-12 rounded-full flex justify-center items-center  cursor-pointer'> <CiLogout className='size-10   hover:shadow-sm hover:shadow-black invert'/></li>
           </>

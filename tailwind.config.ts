@@ -12,7 +12,11 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      
     },
   },
-  plugins: [],
+  plugins: [
+    
+    require('tailwind-scrollbar-hide'),
+  ],
 } satisfies Config;
